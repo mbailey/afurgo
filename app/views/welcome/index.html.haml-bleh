@@ -1,0 +1,47 @@
+.titlebar
+  %img.fl{:src=>"/images/logo.png"}
+  #userbox
+    .userbox_content
+      .thumb
+        %a{:href=>"/purchases"} 
+          %img{:src=>"http://graph.facebook.com/100001645989284/picture", :alt=>"Picture"}
+        .facebook-logo= '&nbsp;'
+
+      .name
+        Welcome back, 
+        %strong
+          %a{:href=>"/purchases"}
+            <fb:name linked="false" useyou="false" uid="loggedinuser">Mike Bailey</fb:name>
+      %ul
+        %li 
+          %a{:href=>"/purchases"} my deals
+          |
+        %li 
+          %a{:href=>"/deals/people/settings"} my account
+          |
+        %li.last
+          %a{:onclick=>"return dls.fbConnect.logout();", :href=>"#"}sign out
+
+        .clear
+
+.main.fl
+  .nav
+    %ul.clear
+      %li.selected
+        %a.item-0{:href=>"/cities/74-melbourne/today"}
+          %span= "today's dog"
+      %li
+        %a.item-1{:href=>"/cities/74-melbourne/deals/past"}
+          %span= "past dogs"
+      %li
+        %a.item-2{:href=>"#"}
+          %span= "how it works"
+      %li
+        %a.item-3{:href=>"#"}
+          %span= "more dogs"
+
+  .content.fr
+    main page
+.footer.clear
+  footer
+  

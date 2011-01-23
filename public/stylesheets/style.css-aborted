@@ -1,0 +1,129 @@
+
+
+.page { margin-left:auto; margin-right:auto; width:960px; }
+.titlebar {margin-top: 10px; position: relative; height: 90px; width: 100%;}
+.userbox { position: absolute; right: 0; }
+.main { float: left }
+.sidebar { float: left}
+.sidebar { width: 220px }
+.content {float: left }
+.footer { clear: both }
+.main { width: 100%}
+
+body, #fb {
+    font: 13px/1.5 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+html {
+  background: url(/images/hero_smile.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.clear { clear: both }
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+
+.clearfix {display: inline-block;}  /* for IE/Mac */
+
+.fl { float: left; }
+.fr { float: right; }
+
+#userbox {
+    float: right;
+    -moz-border-radius: 6px 6px 6px 6px;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+    height: 50px;
+    margin-bottom: 10px;
+    max-width: 340px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
+#userbox .thumb {
+    -moz-border-radius: 3px 3px 3px 3px;
+    background: none repeat scroll 0 0 transparent;
+    float: left;
+    height: 50px;
+    position: relative;
+    width: 50px;
+}
+#userbox .facebook-logo {
+    background: url("http://a2.ak.lscdn.net/deals/images/bingy/facebook.gif") no-repeat scroll left top transparent;
+    bottom: 0;
+    height: 14px;
+    position: absolute;
+    right: 0;
+    width: 14px;
+}
+#userbox .thumb img {
+    -moz-border-radius: 3px 3px 3px 3px;
+    height: 100%;
+    width: 100%;
+}
+.fb-userbox .userbox_content {
+    margin-left: 60px;
+}
+.fb-userbox {
+    padding: 5px;
+}
+#userbox ul li {
+    float: left;
+    padding-right: 5px;
+}
+#userbox ul li a {
+    font-size: 12px;
+    margin-right: 5px;
+}
+#userbox ul li.last {
+    padding-right: 0;
+}
+#userbox ul li.last a {
+    margin-right: 0;
+}
+#userbox .name {
+    color: #ABABAB;
+    font-size: 14px;
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#userbox a, #userbox strong {
+    color: #66C3FE;
+}
+
+div.nav ul {margin: 0; padding: 0; list-style: none; font-size: 16px; font-family: "Rockwell", "Rockwell MT", "American Typewriter",georgia,serif}
+div.nav ul li {width: 220px; margin: 0 0 5px 0; display: block; display: inline-block; background: #fff; background: rgba(255,255,255, .9); -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
+ul li {list-style: none; padding: 0px; margin: 0px}
+#left-navigation li {position: relative;}
+
+div.nav ul {margin: 0; padding: 0; list-style: none; font-size: 16px; font-family: "Rockwell", "Rockwell MT", "American Typewriter",georgia,serif}
+div.nav ul li {width: 220px; margin: 0 0 5px 0; display: block; display: inline-block; background: #fff; background: rgba(255,255,255, .9); -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
+div.nav ul li a {width: 200px; padding: 6px 10px 8px; text-decoration: none; display: inline-block; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px}
+div.nav ul li a:link {color: #1781C1}
+div.nav ul li a:visited {color: #1781C1}
+div.nav ul li a:active {margin: 0px}
+div.nav ul li a:hover, div.nav ul li.selected a {color: #fff; background-color: #9BC03C; background: -webkit-gradient( linear, left bottom, left top, color-stop(0.07, rgb(155,193,59)), color-stop(0.9, rgb(184,212,26)) ); background: -moz-linear-gradient( center bottom, rgb(155,193,59) 7%, rgb(184,212,26) 90% );}
+div.nav ul li.escapes {background: transparent}
+div.nav ul li.escapes a {text-indent: -9999px; width: 220px; height: 91px; background: #9ec43d url("http://a1.ak.lscdn.net/deals/images/cobrand/escapes/escapes-nav.png") no-repeat center right; border-top: 1px solid #fff; padding: 10px 0 0 0; margin: 8px 0 0 0}
+

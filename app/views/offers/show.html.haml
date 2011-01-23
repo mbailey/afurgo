@@ -1,0 +1,55 @@
+- content_for :profile do
+  .panel
+    .panel-content
+      %div
+        #dog_pic{:style=>"background: url(http://gfd.local/latest/1.jpg) no-repeat scroll left top rgb(239,239,239); height: 400px; margin-right: 15px;"}
+          &nbsp;
+      %div{:style=>"float: right; width: 400px"}
+        <div style="background: none repeat scroll 0% 0% yellow; position: relative; top: 10px; left: -70px; -moz-border-radius: 6px 6px 6px 6px; padding: 10px;" class="bubble">
+        <span style="background: none repeat scroll 0% 0% rgb(255, 0, 0); display: block; position: absolute; width: 25px; height: 25px; bottom: -15px;"></span>
+        "woof woof"</div>
+        .title
+          %h1= @offer.name
+          %p= @offer.lede
+          =image_tag 'price.png'
+        .days
+          %span{:style=>"font-size: 1.6em; font-weight: bold; color: rgb(135, 151, 1);"} 27 days
+          <br>
+          waiting for a home
+        .days
+          %span{:style=>"font-size: 1.6em; font-weight: bold; color: rgb(135, 151, 1);"}  
+          <br>
+          waiting for a home
+        .details{:style=>"clear: left;"}
+          %p#details_short
+            = truncate(@offer.details, :length=>120)
+            =link_to '( show more )', '#', :onclick=>"$('#details_long').show(); $('#details_short').hide(); return false;"
+          %p#details_long{:style=>'display: none'}
+            = @offer.details
+            <br />
+            =link_to '( show less )', '#', :onclick=>"$('#details_short').show(); $('#details_long').hide(); return false;"
+
+- content_for :map do
+  #gmap
+    <style type="text/css">
+    html { height: 100% }
+    body { height: 100%; margin: 0px; padding: 0px }
+    #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    = javascript_include_tag 'map'
+
+
+
+  .panel
+    .panel-content
+      .location
+        %h2 Map & Location
+        #google-map
+          a map
+        .address
+          %span.place_name  RSPCA Burwood
+          <br/>
+          %span.street  400 Burwood Road
+          <br/>
+          %span.suburb Burwood, VIC, 3032

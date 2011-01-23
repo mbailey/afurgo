@@ -1,0 +1,135 @@
+<html>
+
+  <head>
+    <title>Who's For Dogs?</title>
+    <link href="style.css" media="screen" rel="stylesheet" type="text/css" /> 
+  </head>
+
+  <body>
+    <div id="page">
+    <div id="titlebar">
+      <img src="/images/logo.png">
+<div id="presence">
+<div class="fb-badge " id="badge">
+    
+    <div class="thumb">
+      <a href="/purchases"><img src="http://graph.facebook.com/100001645989284/picture" alt="Picture"></a>
+      <div class="facebook-logo">&nbsp;</div>
+    </div>
+    
+    <div class="badge_content">
+      <div class="name">
+        Welcome back, <strong><a href="/purchases"><fb:name linked="false" useyou="false" uid="loggedinuser">Mike Bailey</fb:name></a></strong>
+      </div>
+      <ul>
+        <li><a href="/purchases">my deals</a>|</li>
+        <li><a href="/deals/people/settings">my account</a>|</li>
+        <li class="last">
+          
+          <a onclick="return dls.fbConnect.logout();" href="#">sign out</a>
+          
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <form style="display: none;" method="post" id="sign-out-form" action="/deals/people/logout">
+    </form>
+  
+</div>
+</div>
+
+    </div>
+
+    <div id="page-wrapper" style="float: left;"> 
+      <div class="grid_4 nav" style="float: left;"> 
+
+        <div>
+          <ul class="clearfix"> 
+            <li class="selected"><a href="/cities/74-melbourne/today" class="item-0"><span>today's deal</span></a><div class="nub"></div></li> 
+            <li><a href="/cities/74-melbourne/deals/past" class="item-1"><span>past deals</span></a>      <div class="nub"></div></li> 
+            <li><a href="/deals/how_it_works" class="item-2"><span>how it works</span></a>      <div class="nub"></div></li> 
+            <li><a href="/cities" class="item-3"><span>more deals</span></a>      <div class="nub"></div> </li> 
+          </ul> 
+        </div> 
+      </div>
+
+        <div style="float: right; width: 700px;">
+          <div class="panel">
+            <div class="panel-body">Nice Panel</div>
+          </div>
+          <div class="clearfix" style="margin: 10px;"></div>
+            <div class="panel">
+              <div class="panel-body">
+<div class="panel-innards">
+<img src="http://a1.ak.lscdn.net/imgs/87d79f61-efd3-436e-b38d-dd4bbc64fe2b/280_q60.jpg">
+      &nbsp;
+    </div>
+            <div class="grid_7 omega content">
+      <div class="deal-title">
+        <h1>Kojo Brown</h1>
+        <p>Three Tapas and a Bottle of Wine </p>
+      </div>
+
+      <div id="deal-buy-box">
+        
+
+<table class="deal-buy-box buy-now-active">
+  <tbody><tr>
+    <td>
+      <div class="deal-price deal-price-lg">
+      
+        <span class="dollar_sign">$</span>25      
+      </div>
+      
+    </td>
+    <td style="text-align: left;">
+      
+        <a class="button rounded buy-now" href="/deals/19862-53-off-tapas-and-wine/purchases/new?preferred_city=74"><span> buy now!</span></a>
+        
+        <a class="send-as-a-gift" href="/deals/19862-53-off-tapas-and-wine/purchases/new?gift=1&amp;preferred_city=74">send as a gift</a>
+      
+    </td>
+  </tr>
+</tbody></table>
+
+<ul class="clearfix deal-info">
+  <li>
+    <div class="value">
+      53%
+    </div>
+    <div class="label">
+      savings    </div>
+  </li>
+  <li class="purchased">
+    <div class="value">
+  769    </div>
+    <div class="label">
+      purchased    </div>
+  </li>
+  
+  <li style="margin-right: 0px;">
+    
+    <div class="value">
+      
+        2 Days
+      
+    </div>
+    <div class="label">
+      remaining    </div>
+  </li>
+</ul>
+<div class="clear"></div>
+
+  <div class="deal-description">
+    
+    <div id="sfwt_short_1"><p>Who doesn't love tapas? Little plates of absolute deliciousness. Add some wine, a dining companion and a comfortable lounge area and you're all set. Enjoy any three plates of tapas and a bottle of red or white wine ($53 value) at <a href="http://yourrestaurants.com.au/guide/?action=venue&amp;venue_url=kojo_brown" target="_blank">Kojo Brown</a> and dine in style at this trendy... <a onclick="$('#sfwt_short_1').hide(); $('#sfwt_full_1').show();; return false;" href="#" class="sfwt">(show more)</a></p></div><div style="display: none;" id="sfwt_full_1"><p>Who doesn't love tapas? Little plates of absolute deliciousness. Add some wine, a dining companion and a comfortable lounge area and you're all set. Enjoy any three plates of tapas and a bottle of red or white wine ($53 value) at <a href="http://yourrestaurants.com.au/guide/?action=venue&amp;venue_url=kojo_brown" target="_blank">Kojo Brown</a> and dine in style at this trendy venue with its stylish, black, vinyl-padded seating and low-slung tables. With an extensive tapas menu to choose from, the most difficult task will be deciding what to enjoy -- from the Cajun-spiced seasoned crispy calamari with aioli, Spanish grilled chicken with grilled haloumi and tomato relish to spicy chorizo pan-fried with marinated artichokes and mixed olives. There's also garlic and rosemary crusted lamb cutlets, jumbo king prawn cooked in apple cider, garlic, lemon and parsley sauce or the moreish three-cheese mini spanokopita served with honey, olive oil and minted tomato. Kick back in their comfortable lounge area which is the perfect, intimate venue for a casual wine and dine with someone very special.</p> <a onclick="$('#sfwt_short_1').show(); $('#sfwt_full_1').hide();; return false;" href="#" class="sfwt">(show less)</a></div>
+  </div>
+</div>
+
+              </div>
+            </div>
+        </div>
+      </div> 
+  </body>
+
+</html>

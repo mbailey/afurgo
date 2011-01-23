@@ -1,0 +1,13 @@
+# app/config/application.yml
+defaults: &defaults
+  gmaps_api_key:  'ABQIAAAAC7LDoM1owmUzuDy0v9kzUBSlOqAiS6ZozAui5y-D1j-hzWlEvxTbNmc3ehDgs3_MGitOh6wNN0MURA'
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
