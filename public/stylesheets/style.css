@@ -10,15 +10,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline;
 }
 
-html {
-/*  background: url(/images/hero_smile.jpg) no-repeat center center fixed;*/
-  background: url(/images/original_q60.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 h1 {
   margin: 10px 0 0;
   }
@@ -58,7 +49,7 @@ h2 {
   -moz-border-radius: 6px 6px 6px 6px;
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
   background: none repeat scroll 0 0 #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.85);
   -webkit-box-shadow: rgba(0, 0, 0, 0.796875) 0px 1px 3px;
   background: white;
   border-bottom-left-radius: 6px 6px;
@@ -130,6 +121,33 @@ h2 {
   color: white;
 }
 
+ul.stats {
+  display: block;
+  font-family: Rockwell, 'Rockwell MT', 'American Typewriter', georgia, serif;
+  list-style: none;
+  margin: 50px 0px;
+  padding: 0px;
+  clear: both;
+}
+
+ul.stats li {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-box-shadow: 2px 1px 5px #888888;
+    background: none repeat scroll 0 0 #F6F1C8;
+    float: left;
+    font-size: 0.7em;
+    padding: 6px 13px;
+    margin-right: 6px;
+}
+
+ul.stats li span {
+  font-size: 1.6em; 
+  font-weight: bold; 
+  color: rgb(135, 151, 1);
+  width: 100%;
+  position: absolute;
+}
 
 ul.nav {
   width: 220px;
@@ -144,7 +162,8 @@ ul.nav li {
 background: #FFF;
 background: rgba(255, 255, 255, 0.898438);
 background: none repeat scroll 0 0 rgba(255, 255, 255, 0.9);
--moz-border-radius: 6px 6px 6px 6px;
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
 border-bottom-left-radius: 6px 6px;
 border-bottom-right-radius: 6px 6px;
 border-top-left-radius: 6px 6px;
@@ -172,21 +191,23 @@ width: 200px;
 }
 
 #profile .details{
-  margin: 10px;
+  clear: left;
+  margin: 60px 10px;
 }
 
 
 #profile h1 {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 40px;
   margin-bottom: 5px;
 }
 
 #profile .title p {
   color: #58595B;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 10px;
 }
 
 #profile .details {
@@ -202,7 +223,10 @@ width: 200px;
 }
 
 div.bubble {
-  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+
   background: none repeat scroll 0 0 yellow;
   left: -70px;
   padding: 10px;
@@ -211,7 +235,7 @@ div.bubble {
 }
 
 div.bubble span {
-  background: none repeat scroll 0 0 #FF0000;
+  background: url(/images/bubble_tri.gif) repeat scroll 0 0;
   bottom: -15px;
   display: block;
   height: 25px;
@@ -227,12 +251,90 @@ div.bubble span {
   padding: 10px 18px;
 }
 
-.days {
-    -moz-border-radius: 6px 6px 6px 6px;
-    -moz-box-shadow: 2px 1px 5px #888888;
-    background: none repeat scroll 0 0 #F6F1C8;
+
+.adopt {
+  background: -moz-linear-gradient(center bottom , #1D96E1 0%, #1D81BF 47%, #1D81BF 50%, #68C5FF 100%) repeat scroll 0 0 transparent;
+background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#1D96E1), color-stop(0.47, #1D81BF), color-stop(0.5, #1D81BF), to(#68C5FF));
+  -moz-border-radius: 2em;
+  border: medium none;
+  color: #FFFFFF;
+  font: 26px/100% "Rockwell","Rockwell MT","American Typewriter",georgia,serif;
+  text-shadow: 0 -1px 0 #333333;
+  opacity: 0.9;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 1px 2px;
+  border: 1px solid #555555;
+  color: #E9E9E9;
+  cursor: pointer;
+  display: inline-block;
+  font: 26px/100% "Rockwell","Rockwell MT","American Typewriter",georgia,serif;
+  margin: 10px;
+  outline: medium none;
+  padding: 0.3em 1em 0.35em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  float: right;
+}
+
+/* Grey = Adopted */
+.adopted {
+  background: -moz-linear-gradient(center top , #888888, #575757) repeat scroll 0 0 transparent;
+}
+
+.price {
+    color: #9EC43C;
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 52px;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-top: 10px;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+    width: 125px;
     float: left;
-    font-size: 0.7em;
-    padding: 13px;
-    margin-right: 6px;
+}
+
+.dollar-sign {
+    font-size: 22px;
+    left: 14px;
+    line-height: 34px;
+    position: relative;
+    top: -20px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7)
+}
+
+.share {
+  padding: 10px 0;
+  margin: 10px 0;
+  border-top: 1px solid #ddd;
+}
+
+.share p {
+  margin: 7px;
+}
+
+.social-share-fb {
+    background: url("/images/fb_icon.png") no-repeat scroll 5px 3px #ECEEF5;
+    border: 1px solid #C0CBE1;
+    color: #54599A;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 11px;
+    height: 18px;
+    line-height: 20px;
+    padding-left: 20px;
+    padding-right: 5px;
+    text-shadow: 0 1px 1px #FFFFFF;
+}
+
+.social-share-fb-count {
+    float: left;
+    font: bold 12px/20px Arial;
+    padding-left: 5px;
+    padding-right: 5px;
 }

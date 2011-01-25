@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110120050624) do
+ActiveRecord::Schema.define(:version => 20110124151439) do
 
   create_table "offers", :force => true do |t|
     t.string   "name"
@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(:version => 20110120050624) do
     t.datetime "updated_at"
     t.text     "lede"
     t.text     "details"
+    t.string   "city"
+    t.string   "afurgo_url"
+    t.string   "profile_pic_url"
+    t.text     "fbshare_msg"
+    t.string   "kind"
+    t.string   "sex"
+    t.string   "age"
   end
 
 end

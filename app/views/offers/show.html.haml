@@ -6,28 +6,41 @@
           &nbsp;
       %div{:style=>"float: right; width: 400px"}
         <div style="background: none repeat scroll 0% 0% yellow; position: relative; top: 10px; left: -70px; -moz-border-radius: 6px 6px 6px 6px; padding: 10px;" class="bubble">
-        <span style="background: none repeat scroll 0% 0% rgb(255, 0, 0); display: block; position: absolute; width: 25px; height: 25px; bottom: -15px;"></span>
-        "woof woof"</div>
+        <span style=""></span>
+        "The chain hurts my neck! Get me out of here!"</div>
         .title
           %h1= @offer.name
           %p= @offer.lede
-          =image_tag 'price.png'
-        .days
-          %span{:style=>"font-size: 1.6em; font-weight: bold; color: rgb(135, 151, 1);"} 27 days
-          <br>
-          waiting for a home
-        .days
-          %span{:style=>"font-size: 1.6em; font-weight: bold; color: rgb(135, 151, 1);"}  
-          <br>
-          waiting for a home
-        .details{:style=>"clear: left;"}
+          =#image_tag 'price_short.png'
+          .price
+            %span.dollar-sign $
+            250
+          %div
+            .adopt Adopt Now!
+        %ul.stats
+          %li.days
+            %span 27 days
+            <br>
+            waiting for a home
+          %li.days
+            %span blah
+            <br>
+            waiting for a home
+        .details
           %p#details_short
-            = truncate(@offer.details, :length=>120)
+            = truncate(@offer.details, :length=>300, :separator => ' ')
             =link_to '( show more )', '#', :onclick=>"$('#details_long').show(); $('#details_short').hide(); return false;"
           %p#details_long{:style=>'display: none'}
             = @offer.details
             <br />
             =link_to '( show less )', '#', :onclick=>"$('#details_short').show(); $('#details_long').hide(); return false;"
+            .share
+              %p Tell your friends! Help Bessie find her perfect match.
+              <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="afurgo" data-related="goodfordogs:Good For Dogs">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+              <a class="social-share-fb" onclick="return fbShare();" title="Share with Facebook">Share</a>
+              <span id="share_count" class="social-share-fb-count"></span>
+              %script
+                =render :partial => 'shared/fbshare', :locals => {:animal => @offer}
 
 - content_for :map do
   #gmap
@@ -38,8 +51,6 @@
     </style>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     = javascript_include_tag 'map'
-
-
 
   .panel
     .panel-content

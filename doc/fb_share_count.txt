@@ -1,0 +1,7 @@
+https://api.facebook.com/method/fql.query?
+query=SELECT%20share_count%2C%20like_count%2C%20comment_count%2C%20total_count%20FROM%20link_stat%20WHERE%20url%3D%22http%3A%2F%2Fafurgo.com%2F%22&
+access_token=...
+
+https://api.facebook.com/metotal_count%20FROM%20link_stat%20WHERE%20url%3D%22http%3A%2F%2Fafurgo.com%2F%22&format=json&callback=share_count
+
+https://api.facebook.com/method/fql.query?callback=share_count&query=SELECT%20share_count%2C%20like_count%2C%20comment_count%2C%20total_count%20FROM%20link_stat%20WHERE%20url%3D%22http%3A%2F%2Fafurgo.com%2F%22&format=json

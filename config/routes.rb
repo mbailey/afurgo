@@ -3,7 +3,7 @@ Wfd::Application.routes.draw do
     resources :offers
   end
 
-  match 'offers/:id' => 'offers#show'
+  match 'offers/:id(.*)' => 'offers#show', :as => 'offer'
   match 'oauth_redirect' => 'oauth#redirect'
 
   # The priority is based upon order of creation:
@@ -55,7 +55,7 @@ Wfd::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "offers#show"
+  root :to => "offers#redir"
 
   # See how all your routes lay out with "rake routes"
 
