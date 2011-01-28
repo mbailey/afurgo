@@ -9,7 +9,7 @@
         <span style=""></span>
         "The chain hurts my neck! Get me out of here!"</div>
         .title
-          %h1= @offer.name
+          %h1= @offer.name.capitalize
           %p= @offer.lede
           =#image_tag 'price_short.png'
           .price
@@ -35,7 +35,7 @@
             <br />
             =link_to '( show less )', '#', :onclick=>"$('#details_short').show(); $('#details_long').hide(); return false;"
             .share
-              %p Tell your friends! Help Bessie find her perfect match.
+              %p= "Tell your friends! Help #{@offer.name} find #{hisher(@offer) || 'the' } perfect match."
               <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="afurgo" data-related="goodfordogs:Good For Dogs">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
               <a class="social-share-fb" onclick="return fbShare();" title="Share with Facebook">Share</a>
               <span id="share_count" class="social-share-fb-count"></span>
@@ -43,24 +43,18 @@
                 =render :partial => 'shared/fbshare', :locals => {:animal => @offer}
 
 - content_for :map do
-  #gmap
-    <style type="text/css">
-    html { height: 100% }
-    body { height: 100%; margin: 0px; padding: 0px }
-    #map_canvas { height: 100% }
-    </style>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    = javascript_include_tag 'map'
 
   .panel
     .panel-content
       .location
-        %h2 Map & Location
         #google-map
           a map
         .address
-          %span.place_name  RSPCA Burwood
+          %span.place_name= @offer.outlet_name
           <br/>
-          %span.street  400 Burwood Road
+          %span.street= @offer.address_1
           <br/>
-          %span.suburb Burwood, VIC, 3032
+          %span.suburb= [@offer.suburb, @offer.state, @offer.postcode].compact.join(', ')
+
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  = javascript_include_tag 'map'

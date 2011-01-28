@@ -16,6 +16,8 @@ gem 'jquery-rails', '>= 0.2.6'
 gem 'httparty'
 gem 'couchrest'
 
+gem "rails3-generators", :group => :development
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110124151439) do
+ActiveRecord::Schema.define(:version => 20110126145609) do
+
+  create_table "cities", :force => true do |t|
+    t.string   "name"
+    t.string   "country",    :default => "australia"
+    t.string   "region",     :default => "australia"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "offers", :force => true do |t|
     t.string   "name"
@@ -18,13 +26,21 @@ ActiveRecord::Schema.define(:version => 20110124151439) do
     t.datetime "updated_at"
     t.text     "lede"
     t.text     "details"
-    t.string   "city"
     t.string   "afurgo_url"
     t.string   "profile_pic_url"
     t.text     "fbshare_msg"
-    t.string   "kind"
+    t.string   "kind",            :default => "dog"
     t.string   "sex"
     t.string   "age"
+    t.string   "city"
+    t.string   "outlet_name"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "suburb"
+    t.string   "state"
+    t.string   "postcode"
+    t.string   "phone"
+    t.string   "opening_hours"
   end
 
 end

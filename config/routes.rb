@@ -1,6 +1,10 @@
 Wfd::Application.routes.draw do
+
+  resources :cities
+
   namespace :admin do
     resources :offers
+    resources :cities
   end
 
   match 'offers/:id(.*)' => 'offers#show', :as => 'offer'

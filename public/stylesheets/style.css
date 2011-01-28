@@ -338,3 +338,13 @@ background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#1D96E1), color-stop(0
     padding-left: 5px;
     padding-right: 5px;
 }
+
+#map_canvas { height: 100% }
+
+#footer a {
+display: inline-block;
+padding: 6px 10px 8px;
+text-decoration: none;
+color: #62B9ED;
+}
+

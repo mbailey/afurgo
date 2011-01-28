@@ -1,3 +1,1 @@
-%p 
-  - %w(mike belle brandy bessie friends contact).each do |name|
-    =link_to 'everybody loves ' + name, name
+%p= %w(mike belle brandy bessie friends contact).collect { |name| link_to name, '/' + name}.join(' | ').html_safe

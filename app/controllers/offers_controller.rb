@@ -2,12 +2,12 @@ class OffersController < ApplicationController
 
   before_filter :get_city
 
-  include ::HTTParty
-  base_uri 'http://gfd.local'
-  format :json
+  # include ::HTTParty
+  # base_uri 'http://www.goodfordogs.org'
+  # format :json
 
   def show
-    @offer = HTTParty.get('http://gfd.local/latest/1.json')
+    # @offer = HTTParty.get('http://gfd.local/latest/1.json')
     @offer = Offer.find(params[:id])
     @city = @offer.city
     # TODO Show something if city not found
