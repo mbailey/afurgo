@@ -18,7 +18,8 @@ attributes = { :sex => 'f',
                             :state => 'ACT',
                             :phone => "1300 477 722",
                             :opening_hours => "Monday - Friday 10.00am - 4.00pm Weekends 10.00am - 4.00pm  Please note on Wednesday viewing of animals commences at 11.00am"}
-o = Offer.find_or_create_by_name(:molly, attributes)
-o.update_attributes attributes
-                             
 
+%w(bill ben huey luey dewey peter paul mary).each do |name| 
+  o = Offer.find_or_create_by_name(name, attributes)
+  o.update_attributes attributes
+end

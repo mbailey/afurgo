@@ -14,6 +14,7 @@ set :web_server_type,   :apache     # :apache, :nginx
 set :app_server_type,   :passenger  # :passenger, :mongrel
 set :db_server_type,    :mysql      # :mysql, :postgresql, :sqlite
 
+
 # set :packages_for_project, %w(libmagick9-dev imagemagick libfreeimage3) # list of packages to be installed
 # set :gems_for_project, %w(rmagick mini_magick image_science) # list of gems to be installed
 
@@ -32,3 +33,23 @@ namespace :deploy do
     top.deprec.app.restart
   end
 end
+
+
+#
+# bundler
+#
+before "deploy:bundle_install", "deploy:install_bundler"
+after "deploy:update_code", "deploy:bundle_install"
+
+namespace :deploy do
+  desc "installs Bundler if it is not already installed"
+  task :install_bundler, :roles => :app do
+    sudo "sh -c 'if [ -z `which bundle` ]; then echo Installing Bundler; sudo gem install bundler; fi'"
+  end
+
+  desc "run 'bundle install' to install Bundler's packaged gems for the current deploy"
+  task :bundle_install, :roles => :app do
+    run "cd #{release_path} && bundle install"
+  end
+end
+

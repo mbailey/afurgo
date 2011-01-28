@@ -2,11 +2,14 @@ Wfd::Application.routes.draw do
 
   namespace :admin do
     resources :offers
-    resources :cities
   end
 
-  match 'offers/:id(.*)' => 'offers#show', :as => 'offer'
+  match 'dogs/:id(.*)' => 'offers#show', :as => 'offer'
+  match 'past_dogs' => 'offers#past', :as => 'past_dogs'
   match 'oauth_redirect' => 'oauth#redirect'
+  match 'about' => 'welcome#about', :as => 'about'
+  match 'cities' => 'welcome#cities', :as => 'cities'
+  match 'contact' => 'welcome#contact', :as => 'contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

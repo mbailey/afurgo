@@ -1,5 +1,4 @@
 %ul.nav
-  %li today's dog
-  %li past dogs
-  %li how it works
-  %li more dogs
+  %li= link_to_unless_current "today's dog", root_path
+  %li= link_to_unless_current "past dogs", past_dogs_path
+  %li= link_to_unless_current "how it works", about_path

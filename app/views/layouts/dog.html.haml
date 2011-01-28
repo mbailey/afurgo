@@ -10,7 +10,10 @@
     .header=# render 'shared/title'
     .sidebar= render 'shared/nav'
     .main
+      #profile= yield :profile
+      #map= yield :map
       = yield
+      #comments= render 'shared/comments'
       #footer= render 'shared/footer'
 
 = render 'shared/fb'
