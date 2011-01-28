@@ -6,13 +6,6 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley' city => cities.first)
 
-
-CITIES = %w(melbourne sydney canberra tasmania perth brisbane adelaide)
-
-CITIES.each do |city|
-  City.find_or_create_by_name(city)
-end
-
 attributes = { :sex => 'f',
                              :age => '4 years',
                              :city => 'canberra',
