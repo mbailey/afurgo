@@ -15,6 +15,7 @@ gem 'settingslogic'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'httparty'
 gem 'couchrest'
+gem 'mysql2'
 
 gem "rails3-generators", :group => :development
 
