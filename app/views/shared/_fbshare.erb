@@ -11,7 +11,7 @@ function fbShare() {
      "properties": { 
        "location" : "<%= animal.city || 'City Missing' %>",
        "sex" : "<%= animal.sex %>", 
-       "age" : <%= animal.age || "\"N/A\"".html_safe %> 
+       "age" : "<%= animal.age || 'N/A' %>"
      }
    },
    function(response) {
