@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
     def get_city
       if params[:city]
-        @city = cookies.permanent[:city] = params[:city]
+        @city = params[:city]
       elsif cookies[:city]
         @city = cookies[:city]
       end

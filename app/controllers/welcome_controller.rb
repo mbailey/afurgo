@@ -15,4 +15,7 @@ class WelcomeController < ApplicationController
   def contact
   end
 
+  def press
+  end
+
 end

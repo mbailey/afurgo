@@ -1,12 +1,8 @@
 class OffersController < ApplicationController
 
 
-  # include ::HTTParty
-  # base_uri 'http://www.goodfordogs.org'
-  # format :json
 
   def show
-    # @offer = HTTParty.get('http://gfd.local/latest/1.json')
     @offer = Offer.find(params[:id])
     @city = @offer.city
     render :layout => 'dog'
@@ -16,14 +12,21 @@ class OffersController < ApplicationController
   def redir
     @offer = Offer.city(@city).last
     if @offer
+      cookies.permanent[:city] = @city
       redirect_to @offer
     else
+      cookies.permanent[:city] = @city unless cookies.permanent[:city]
       redirect_to cities_url
     end   
   end
 
   def past
     @offers = Offer.city(@city).order("id DESC").limit(5)
+  end
+
+  def more
+    # Change to city?
+    @offers = GFD.available('vic')
   end
 
 end

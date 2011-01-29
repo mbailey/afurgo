@@ -3,11 +3,12 @@
 %head
   %title= content_for(:title).blank? ? 'afurgo.com : Help homeless animals get a second chance' : content_for(:title) 
   = stylesheet_link_tag :all
+  <link  href="//fonts.googleapis.com/css?family=Sniglet:800" rel="stylesheet" type="text/css" >
   = javascript_include_tag :defaults
   = csrf_meta_tag 
 %body{:onload=>"initialize()"}
   .page
-    .header=# render 'shared/title'
+    .header= render 'shared/title'
     .sidebar= render 'shared/nav'
     .main
       #profile= yield :profile

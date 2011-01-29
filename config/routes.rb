@@ -6,10 +6,12 @@ Wfd::Application.routes.draw do
 
   match 'dogs/:id(.*)' => 'offers#show', :as => 'offer'
   match 'past_dogs' => 'offers#past', :as => 'past_dogs'
+  match 'more_dogs' => 'offers#more', :as => 'more_dogs'
   match 'oauth_redirect' => 'oauth#redirect'
   match 'about' => 'welcome#about', :as => 'about'
   match 'cities' => 'welcome#cities', :as => 'cities'
   match 'contact' => 'welcome#contact', :as => 'contact'
+  match 'press' => 'welcome#press', :as => 'press'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,1 +1,4 @@
-%p= %w(about cities contact).collect { |name| link_to name, '/' + name}.join(' | ').html_safe
+%p 
+  = %w(about cities press).collect { |name| link_to name, '/' + name}.join(' | ').html_safe
+  |
+  = mail_to 'info@goodfordogs.org', 'info@goodfordogs.org'

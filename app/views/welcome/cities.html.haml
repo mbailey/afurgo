@@ -4,9 +4,9 @@
     %p We've got the following cities covered and are adding more. Please get in touch if you want to help out.
     - @cities.each do |region, cities|
       %h2= region.capitalize 
-      %ul
+      %ul.cities
         - if ! cities.blank?
           - cities.each do |city|
-            %li= link_to city, "/?city=#{city}"
+            %li= link_to city.capitalize, "/?city=#{city}"
         - else
           Stay tuned!
