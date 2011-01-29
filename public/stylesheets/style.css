@@ -437,6 +437,12 @@ background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#1D96E1), color-stop(0
   margin-top: 15px;
 }
 
+ul.photos {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 ul.photos li{
   height:100px;
@@ -484,4 +490,8 @@ ul.photos a, ul.photos img {
   float: right; 
   font-size: 2.2em;
   margin-top: 30px;
+}
+
+img.hero {
+  border: solid 1px black;
 }

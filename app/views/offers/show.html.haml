@@ -5,9 +5,9 @@
         #dog_pic{:style=>"background: url(http://gfd.local/latest/1.jpg) no-repeat scroll left top rgb(239,239,239); height: 400px; margin-right: 15px;"}
           &nbsp;
       %div{:style=>"float: right; width: 400px"}
-        <div class="bubble">
-        <span style=""></span>
-        "The chain hurts my neck! Get me out of here!"</div>
+        .bubble
+          %span
+          I'm ready to come home with you!
         .title
           %h1= @offer.name.capitalize
           %p= @offer.lede

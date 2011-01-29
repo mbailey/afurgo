@@ -1,5 +1,5 @@
 %ul.nav
-  %li= link_to_unless_current "today's dog", root_path
-  %li= link_to_unless_current "past dogs", past_dogs_path
-  %li.selected= link_to_unless_current "how it works", about_path
-  %li= link_to_unless_current "more dogs", more_dogs_path
+  %li{:class=> request.path.match(/^\/dogs/) ? 'selected' : nil}= link_to_unless request.path.match(/^\/dogs/), "today's dog", root_path
+  %li{:class=> current_page?(past_dogs_path) ? 'selected' : nil}= link_to_unless_current "past dogs", past_dogs_path
+  %li{:class=> current_page?(about_path) ? 'selected' : nil}= link_to_unless_current "how it works", about_path
+  %li{:class=> current_page?(more_dogs_path) ? 'selected' : nil}= link_to_unless_current "more dogs", more_dogs_path

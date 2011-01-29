@@ -23,8 +23,7 @@ class OffersController < ApplicationController
   end
 
   def more
-    # Change to city?
-    @offers = GFD.available('vic')
+    @offers = GFD.available(@city)
   end
 
 end
