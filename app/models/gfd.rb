@@ -1,7 +1,7 @@
 class GFD
   require 'httparty'
   include ::HTTParty
-  base_uri 'http://gfd.local'
+  base_uri 'http://www.goodfordogs.org'
   format :json 
 
   # @offer = HTTParty.get('http://gfd.local/latest/1.json')
