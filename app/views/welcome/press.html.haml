@@ -1,7 +1,36 @@
 .panel
-  .panel-content
+  .panel-content.press
     %h1 Press
-    .left{:style=>"float:left; width: 400px; height: 500px; background-color: #EDF"}
-      left panel
-    .left{:style=>"float:right; width: 300px; height: 500px; background-color: #DFF"}
-      right panel
+    .left{:style=>"float:left; width: 65%;"}
+      %h2 afurgo in the news
+      %ul.stories
+        %li
+          = link_to 'Social Network Saving More Than Money', '#'
+          %br
+          %span.source Dog Insider
+          %span.date 2011-01-22
+        %li
+          = link_to 'New Idea Hits Rescue Community', '#'
+          %br
+          %span.source Daily Bark
+          %span.date 2010-12-14
+    .right{:style=>"float:right; width: 35%;"}
+      .media_bubble
+        %h3 Media Enquiries
+
+        .name Mike Bailey
+        .title Founder
+        .email= mail_to 'mike.bailey@afurgo.com'
+
+
+      .media_bubble
+        %h3 Media Releases
+        %ul
+          %li
+            %span.date 2011-02-01
+            %br
+            %span.title= link_to 'Social Network Harnessed to Save Dogs', '#'
+          %li
+            %span.date 2011-01-15
+            %br
+            %span.title= link_to 'Homeless Dogs Get Late Xmas Present', '#'

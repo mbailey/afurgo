@@ -193,6 +193,53 @@ ul.stats li {
     padding: 6px 13px;
     margin-right: 6px;
 }
+.media_bubble {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-box-shadow: 2px 1px 5px #888888;
+    background: none repeat scroll 0 0 #F6F1C8;
+    float: left;
+    padding: 6px 13px;
+    margin-right: 6px;
+    margin-top: 20px;
+    width: 200px;
+}
+.press ul {
+  list-style: none;
+}
+.press .date {
+  font-size: 0.8em;
+}
+.press .title {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.press .desc {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.press .name {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #000;
+}
+
+.media_bubble .title {
+  font-size: 0.8em;
+  color: #555;
+}
+
+.media_bubble .email {
+  font-size: 0.9em;
+}
+
+ul.stories li{
+  padding: 10px 0;
+}
+
 
 ul.stats li span {
   font-size: 1.6em; 
