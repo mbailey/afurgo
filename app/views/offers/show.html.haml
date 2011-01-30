@@ -2,7 +2,7 @@
   .panel
     .panel-content-profile
       %div
-        #dog_pic{:style=>"background: url(http://www.goodfordogs.org/latest/1.jpg) no-repeat scroll left top rgb(239,239,239); height: 400px; margin-right: 15px;"}
+        #dog_pic{:style=>"background: url(#{@offer.profile_pic_url}) no-repeat scroll left top rgb(239,239,239); height: 400px; margin-right: 15px;"}
           &nbsp;
       %div{:style=>"float: right; width: 400px"}
         .bubble
@@ -13,10 +13,13 @@
           %p= @offer.lede
           =#image_tag 'price_short.png'
           .days
-            %span 27 days
+            %span
+              = @offer.days_available
+              days
             <br>
             waiting for a home
-          .adopt Adopt Now!
+          .adopt{:onClick => "location.href='#{@offer.listing_page_url}'"} 
+            Adopt Now!
         .details
           %p#details_short
             = truncate(@offer.details, 

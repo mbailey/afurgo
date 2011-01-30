@@ -17,6 +17,8 @@ attributes = { :sex => 'f',
                             :postcode => '2611',
                             :state => 'ACT',
                             :phone => "1300 477 722",
+                            :listing_page_url => "http://www.adoptapet.com.au/animal/animalDetails.asp?animalid=150660&result=3&statusID=3",
+                            :profile_pic_url => 'http://s3.amazonaws.com/s3.goodfordogs.org/offerings/149954/photos/39be6c40f7b0ee4ea6c6d004c2712086original.',
                             :opening_hours => "Monday - Friday 10.00am - 4.00pm Weekends 10.00am - 4.00pm  Please note on Wednesday viewing of animals commences at 11.00am"}
 
 %w(bill ben huey luey dewey peter paul mary).each do |name| 

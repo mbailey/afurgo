@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110126145609) do
+ActiveRecord::Schema.define(:version => 20110130115203) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20110126145609) do
     t.string   "afurgo_url"
     t.string   "profile_pic_url"
     t.text     "fbshare_msg"
-    t.string   "kind",            :default => "dog"
+    t.string   "kind",             :default => "dog"
     t.string   "sex"
     t.string   "age"
     t.string   "city"
@@ -41,6 +41,9 @@ ActiveRecord::Schema.define(:version => 20110126145609) do
     t.string   "postcode"
     t.string   "phone"
     t.string   "opening_hours"
+    t.datetime "first_seen"
+    t.datetime "adopted_at"
+    t.string   "listing_page_url"
   end
 
 end

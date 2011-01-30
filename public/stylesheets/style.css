@@ -359,15 +359,14 @@ div.bubble span {
 
 .adopt {
   background: -moz-linear-gradient(center bottom , #1D96E1 0%, #1D81BF 47%, #1D81BF 50%, #68C5FF 100%) repeat scroll 0 0 transparent;
-background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#1D96E1), color-stop(0.47, #1D81BF), color-stop(0.5, #1D81BF), to(#68C5FF));
-  -moz-border-radius: 2em;
+  background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#1D96E1), color-stop(0.47, #1D81BF), color-stop(0.5, #1D81BF), to(#68C5FF));
   border: medium none;
-  color: #FFFFFF;
   font: 26px/100% "Rockwell","Rockwell MT","American Typewriter",georgia,serif;
   text-shadow: 0 -1px 0 #333333;
   opacity: 0.9;
-  -moz-border-radius: 2em;
   border-radius: 2em;
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 1px 2px;
   border: 1px solid #555555;

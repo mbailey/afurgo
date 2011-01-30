@@ -11,4 +11,9 @@ class Offer < ActiveRecord::Base
     "#{self.id}-#{self.name.parameterize}-the-#{self.kind.parameterize}-in-#{self.city.parameterize}"
   end
 
+  def days_available
+    end_time = adopted_at || Time.now
+    Integer((end_time - first_seen)/86400.0)
+  end
+
 end
