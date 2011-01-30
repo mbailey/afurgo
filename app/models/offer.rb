@@ -12,6 +12,7 @@ class Offer < ActiveRecord::Base
   end
 
   def days_available
+    return '?' if first_seen.blank?
     end_time = adopted_at || Time.now
     Integer((end_time - first_seen)/86400.0)
   end
