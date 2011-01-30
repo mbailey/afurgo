@@ -8,6 +8,8 @@ set :rails_env, 'production'
 # If you aren't using Subversion to manage your source code, specify
 # your SCM below:
 set :scm, :git
+set :deploy_via, :remote_cache
+
    
 set :ruby_vm_type,      :ree        # :ree, :mri
 set :web_server_type,   :apache     # :apache, :nginx
