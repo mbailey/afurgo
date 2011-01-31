@@ -12,8 +12,6 @@ class ApplicationController < ActionController::Base
       @city = params[:city]
     elsif cookies[:city]
       @city = cookies[:city]
-    else
-      redirect_to cities_url
     end
   end
 
