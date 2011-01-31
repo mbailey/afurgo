@@ -17,12 +17,18 @@
   <![endif]-->
 %body{:onload=>"initialize()"}
   %img{:id => 'bg', :src=>"/images/backgrounds/#{@city}.jpg", :alt=>"background image"}
-  #page-content
-    .page
-      .header= render 'shared/title'
-      .sidebar= render 'shared/nav'
-      .main
-        = yield
-        #footer= render 'shared/footer'
+  #page
+    .header= render 'shared/title'
+    .sidebar= render 'shared/nav'
+    .main
+      - if @show_profile
+        #profile= yield(:profile) 
+      - if @show_map
+        #map= yield(:map) 
+      = yield
+      - if @show_comments
+        #comments= render 'shared/comments'
+
+      #footer= render 'shared/footer'
 
   = render 'shared/fb'

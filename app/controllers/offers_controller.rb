@@ -3,8 +3,8 @@ class OffersController < ApplicationController
   def show
     @offer = Offer.find(params[:id])
     @city = @offer.city
-    render :layout => 'dog'
     # TODO Show something if city not found
+    @show_profile = @show_map = @show_comments = true
   end
 
   def redir
