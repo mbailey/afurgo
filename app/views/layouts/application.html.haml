@@ -16,7 +16,7 @@
   </style>
   <![endif]-->
 %body{:onload=>"initialize()"}
-  %img{:id => 'bg', :src=>"/images/backgrounds/#{@city}.jpg", :alt=>"background image"}
+  %img{:id => 'bg', :src=>"/images/backgrounds/#{@city.blank? ? 'default' : @city}.jpg", :alt=>"background image"}
   #page
     .header= render 'shared/title'
     .sidebar= render 'shared/nav'

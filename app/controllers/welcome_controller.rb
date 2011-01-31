@@ -18,4 +18,8 @@ class WelcomeController < ApplicationController
   def press
   end
 
+  def select
+    render :layout => false
+  end
+
 end

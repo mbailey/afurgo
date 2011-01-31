@@ -12,6 +12,7 @@ Wfd::Application.routes.draw do
   match 'cities' => 'welcome#cities', :as => 'cities'
   match 'contact' => 'welcome#contact', :as => 'contact'
   match 'press' => 'welcome#press', :as => 'press'
+  match 'select' => 'welcome#select', :as => 'select'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

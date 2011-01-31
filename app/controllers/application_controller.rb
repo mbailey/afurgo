@@ -13,6 +13,9 @@ class ApplicationController < ActionController::Base
         @city = params[:city]
       elsif cookies[:city]
         @city = cookies[:city]
+      # XXX need signup page    
+      # elsif  action_name != 'select' && params[:id].blank?
+      #  redirect_to select_url
       end
     end
 end
