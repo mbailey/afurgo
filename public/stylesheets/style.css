@@ -10,6 +10,19 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline;
 }
 
+#page-content {
+  position:relative;
+  z-index:1;
+} 
+
+Xhtml {
+  background: url(/images/backgrounds/#{@city}.jpg) no-repeat center center fixed; 
+  background-size: cover;
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;
+}
+
 a, a:link, a:active, a:visited { 
   color: #1D81C1;
   text-decoration: none;
@@ -541,3 +554,11 @@ ul.photos a, ul.photos img {
 img.hero {
   border: solid 1px black;
 }
+
+img#bg {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+} 

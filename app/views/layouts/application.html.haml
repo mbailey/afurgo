@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-%html{:style=>" background: url(/images/backgrounds/#{@city}.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; "}
+%html
 %head
   %title= content_for(:title).blank? ? 'afurgo.com : Help homeless animals get a second chance' : content_for(:title) 
   = stylesheet_link_tag :all
@@ -7,12 +7,22 @@
   = javascript_include_tag :defaults
   = csrf_meta_tag 
   = render 'shared/ga'
+  <!--[if IE 6]>
+  <style type="text/css">
+  html { overflow-y: hidden; }
+  body { overflow-y: auto; }
+  img#bg { position:absolute; z-index:-1; }
+  #content { position:static; }
+  #</style>
+  #<![endif]-->
 %body{:onload=>"initialize()"}
-  .page
-    .header= render 'shared/title'
-    .sidebar= render 'shared/nav'
-    .main
-      = yield
-      #footer= render 'shared/footer'
+  %img{:id => 'bg', :src=>"/images/backgrounds/#{@city}.jpg", :alt=>"background image"}
+  #page-content
+    .page
+      .header= render 'shared/title'
+      .sidebar= render 'shared/nav'
+      .main
+        = yield
+        #footer= render 'shared/footer'
 
-= render 'shared/fb'
+  = render 'shared/fb'
