@@ -1,5 +1,7 @@
 class OffersController < ApplicationController
 
+  before_filter :redirect, :except => :show
+
   def show
     @offer = Offer.find(params[:id])
     @city = @offer.city
@@ -25,5 +27,10 @@ class OffersController < ApplicationController
   def more
     @offers = GFD.available(@city)
   end
+
+  private 
+    def redirect
+      redirect_to select_path if @city.blank?
+    end
 
 end

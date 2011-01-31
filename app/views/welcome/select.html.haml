@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-%html
-%head
-%body
-  %h1 Select your city
-
-
-
+.panel
+  .panel-content
+    %h1 Select your city
+    .select
+      = form_tag(root_path) do
+        = select_tag(:city, options_for_select(%w(melbourne sydney)) )
+        %br
+        = submit_tag :foo

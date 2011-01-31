@@ -19,7 +19,6 @@ class WelcomeController < ApplicationController
   end
 
   def select
-    render :layout => false
   end
 
 end

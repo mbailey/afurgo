@@ -6,18 +6,17 @@ class ApplicationController < ActionController::Base
   REGIONS = ['oceania', 'north america', 'europe']
   COUNTRIES = {'oceania' => ['melbourne', 'canberra', 'tasmania', 'perth']}
 
-  private
 
-    def get_city
-      if params[:city]
-        @city = params[:city]
-      elsif cookies[:city]
-        @city = cookies[:city]
-      # XXX need signup page    
-      # elsif  action_name != 'select' && params[:id].blank?
-      #  redirect_to select_url
-      end
+  def get_city
+    if params[:city]
+      @city = params[:city]
+    elsif cookies[:city]
+      @city = cookies[:city]
+    else
+      redirect_to cities_url
     end
+  end
+
 end
 
 class Hash
