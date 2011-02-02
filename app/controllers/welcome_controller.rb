@@ -1,15 +1,21 @@
 class WelcomeController < ApplicationController
 
-  def about
-  end
-
-  def cities
-    @cities = {
+    CITIES = {
       'oceania' => %w(adelaide brisbane canberra melbourne perth sydney tasmania),
       'north america' => [],
       'europe' => []
            }
 
+
+  def about
+  end
+
+  def cities
+    @cities = CITIES
+  end
+
+  def select
+    @cities = CITIES
   end
 
   def contact
@@ -18,7 +24,5 @@ class WelcomeController < ApplicationController
   def press
   end
 
-  def select
-  end
 
 end
