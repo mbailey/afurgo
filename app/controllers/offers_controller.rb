@@ -16,7 +16,7 @@ class OffersController < ApplicationController
       redirect_to @offer
     else
       cookies.permanent[:city] = @city unless cookies.permanent[:city]
-      redirect_to cities_url
+      redirect_to more_dogs_path
     end   
   end
 
