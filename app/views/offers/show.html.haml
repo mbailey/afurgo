@@ -10,9 +10,6 @@
         #dog_pic{:style=>"background: url(#{@offer.profile_pic_url}) no-repeat scroll left top rgb(239,239,239); height: 400px; margin-right: 15px;"}
           &nbsp;
       %div{:style=>"float: right; width: 400px"}
-        .bubble
-          %span
-          I'm ready to come home with you!
         .title
           %h1= @offer.name.capitalize
           %p= @offer.lede

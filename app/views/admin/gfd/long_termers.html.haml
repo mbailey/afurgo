@@ -1,0 +1,2 @@
+- @dogs[-10,10].each do |dog|
+  %img{:src=>dog['photo_thumb'], :title => Integer((Time.now - dog['first_seen'])/86400).to_s + ' ' + dog['listing_url']}

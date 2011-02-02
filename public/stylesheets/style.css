@@ -80,6 +80,7 @@ h2 {
   overflow: auto;
 }
 
+
 .panel-content {
   overflow: auto;
   padding: 15px;
@@ -317,7 +318,8 @@ ul.nav li a:hover {
 
 
 #profile h1 {
-  font-size: 40px;
+  color: #58595B;
+  font-size: 48px;
   font-weight: bold;
   line-height: 40px;
   margin-bottom: 5px;
@@ -345,9 +347,11 @@ div.bubble {
 
   background: none repeat scroll 0 0 #FCFAA4;
   left: -70px;
-  padding: 10px;
+  padding: 10px 15px;
   position: relative;
   top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 div.bubble span {

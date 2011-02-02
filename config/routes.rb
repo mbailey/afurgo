@@ -2,6 +2,7 @@ Wfd::Application.routes.draw do
 
   namespace :admin do
     resources :offers
+    match 'longtermers' => 'gfd#long_termers'
   end
 
   match 'dogs/:id(.*)' => 'offers#show', :as => 'offer'

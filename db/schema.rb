@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110130115203) do
+ActiveRecord::Schema.define(:version => 20110201142636) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -44,6 +44,10 @@ ActiveRecord::Schema.define(:version => 20110130115203) do
     t.datetime "first_seen"
     t.datetime "adopted_at"
     t.string   "listing_page_url"
+    t.string   "breed"
+    t.string   "size"
+    t.datetime "adopted"
+    t.datetime "approved"
   end
 
 end
