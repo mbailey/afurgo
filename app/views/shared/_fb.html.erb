@@ -16,7 +16,7 @@
     method: 'fql.query',
     query: 'SELECT share_count, like_count, comment_count, total_count FROM link_stat WHERE url="<%= request.url %>"'
     }, function(response){ //callback
-    $('#share_count').html(response[0].like_count).show();
+    $('#share_count').html(response[0].total_count).show();
   });
 }
 
