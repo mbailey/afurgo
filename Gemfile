@@ -1,6 +1,12 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
+#  or for couchdb
+# gem 'railties'
+# gem 'actionpack'
+# gem 'actionmailer'
+# gem 'activemodel'
+# gem "couch_potato"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -14,7 +20,7 @@ gem 'twitter_oauth'
 gem 'settingslogic'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'httparty'
-gem 'couchrest'
+# gem 'couchrest'
 gem 'mysql2'
 
 gem "rails3-generators", :group => :development
