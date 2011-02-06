@@ -10,9 +10,9 @@ function fbShare() {
      "message": "<%= animal.fbshare_msg || "Check out this great #{animal.kind || 'dog'}!"%>",
      "properties": { 
        "location" : "<%= animal.city || 'City Missing' %>",
-       "age" : "<%= animal.age || 'N/A' %>"
+       "age" : "<%= animal.age || 'N/A' %>",
        "sex" : "<%= animal.sex %>", 
-       "breed" : "<%= animal.breed %>", 
+       "breed" : "<%= animal.breed %>" 
      }
    },
    function(response) {
