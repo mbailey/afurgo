@@ -8,12 +8,7 @@ function fbShare() {
      "caption": "Please help us find one",
      "description": "<%= animal.details  || 'Details missing' %>",
      "message": "<%= animal.fbshare_msg || "Check out this great #{animal.kind || 'dog'}!"%>",
-     "properties": { 
-       "location" : "<%= animal.city || 'City Missing' %>",
-       "age" : "<%= animal.age || 'N/A' %>",
-       "sex" : "<%= animal.sex %>", 
-       "breed" : "<%= animal.breed %>" 
-     }
+     "properties": <%= animal.fbshare_attributes.to_json %>
    },
    function(response) {
      if (response && response.post_id) {

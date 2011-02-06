@@ -22,4 +22,9 @@ class Offer < ActiveRecord::Base
     update_attributes :approved => time
   end
 
+  def fbshare_attributes
+    target_attributes = %w( location ae sex breed )
+    attributes.select {|k,v| target_attributes.include?(k.to_s) and ! v.blank?}
+  end
+
 end
