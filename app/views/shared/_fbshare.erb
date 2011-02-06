@@ -3,7 +3,7 @@ function fbShare() {
    {
      "method": "feed",
      "name": "<%= animal.name || "Name Missing" %> needs a new home",
-     "link": "<%= offer_url(animal)  || 'http://afurgo.com'%>",
+     "link": "<%= request.url  || 'http://afurgo.com'%>",
      "picture": "<%= animal.profile_pic_url || 'http://goodfordogs.org/latest/1.jpg' %>",
      "caption": "Please help us find one",
      "description": "<%= animal.details  || 'Details missing' %>",

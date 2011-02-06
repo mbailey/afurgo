@@ -14,7 +14,7 @@
   function updateShareCount() {
     FB.api({
     method: 'fql.query',
-    query: 'SELECT share_count, like_count, comment_count, total_count FROM link_stat WHERE url="http://afurgo.com/"'
+    query: 'SELECT share_count, like_count, comment_count, total_count FROM link_stat WHERE url="<%= request.url %>"'
     }, function(response){ //callback
     $('#share_count').html(response[0].like_count).show();
   });
