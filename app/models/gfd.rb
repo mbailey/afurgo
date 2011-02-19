@@ -1,7 +1,8 @@
 class GFD
   require 'httparty'
   include ::HTTParty
-  base_uri 'http://www.goodfordogs.org'
+  # base_uri 'http://www.goodfordogs.org'
+  base_uri 'http://gfd.local'
   format :json 
 
   # @offer = HTTParty.get('http://gfd.local/latest/1.json')
@@ -21,6 +22,10 @@ class GFD
       'tas' => %w(tasmania hobart)
     }
     cities.detect{ |k,v| v.include? city.to_s.downcase }.first
+  end
+
+  def self.offering(id)
+    get("/offerings/#{id}.json").parsed_response
   end
 
 end

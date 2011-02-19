@@ -8,8 +8,8 @@
 
 attributes = { # dog details
                :sex => 'female',
-               :age => '4 y/o',
                :city => 'canberra',
+               :dob => 4.years.ago,
                :size => 'medium',
                :breed => 'mixed breed',
                :first_seen => 10.days.ago,

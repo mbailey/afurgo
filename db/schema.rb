@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110201142636) do
+ActiveRecord::Schema.define(:version => 20110208141254) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -48,6 +48,9 @@ ActiveRecord::Schema.define(:version => 20110201142636) do
     t.string   "size"
     t.datetime "adopted"
     t.datetime "approved"
+    t.string   "gfd_token"
+    t.boolean  "available"
+    t.datetime "dob"
   end
 
 end

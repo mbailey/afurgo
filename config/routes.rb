@@ -15,6 +15,10 @@ Wfd::Application.routes.draw do
   match 'press' => 'welcome#press', :as => 'press'
   match 'select' => 'welcome#select', :as => 'select'
 
+  match '/animal_updated/:gfd_token' => 'gfd_hooks#animal_updated', :as => 'notify'
+
+  # map.chargify_hooks '/chargify/hooks', :controller => 'chargify/hooks', :action => "dispatch", :conditions => { :method => :post }
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

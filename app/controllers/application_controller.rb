@@ -8,7 +8,9 @@ class ApplicationController < ActionController::Base
 
 
   def get_city
-    if params[:city]
+    if self.class.to_s.split("::").first=="Admin"
+      @city = 'space'
+    elsif params[:city]
       @city = params[:city]
     elsif cookies[:city]
       @city = cookies[:city]

@@ -25,7 +25,9 @@
         #profile= yield(:profile) 
       - if @show_map
         #map= yield(:map) 
-      = yield
+      .panel 
+        .panel-content
+          = yield
       - if @show_comments
         #comments= render 'shared/comments'
 
